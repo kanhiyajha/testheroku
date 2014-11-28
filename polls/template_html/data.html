@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+
+<!-- FIRST PAGE -->
+<!--code by akshay-->
+
+<html>
+<head>
+
+<!--code by akshay-->
+
+
+   <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="styles.css">
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="script.js"></script>
+    <meta charset="ISO-8859-1">
+<meta charset="ISO-8859-1">
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  
+  <script src="http://code.jquery.com/jquery-1.8.2.js" type="text/javascript"></script>
+  
+  <script type="text/javascript"
+    src="http://viralpatel.net/blogs/demo/jquery/jquery.shorten.1.0.js"></script>
+
+  <script type="text/javascript" src="../src/jquery.shorten.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  <script src="jquery.shorten.js"></script>
+   
+
+  <style>
+#cssmenu,
+#cssmenu ul,
+#cssmenu li,
+#cssmenu a {
+  border: none;
+  line-height: 1;
+  margin: 0;
+  padding: 5px;
+}
+#cssmenu {
+  height: 38px;
+  display: block;
+  border: 1px solid;
+  border-radius: 5px;
+  width: auto;
+  border-color: #d3d3d3;
+  margin: 0;
+  padding: 0;
+}
+#cssmenu > ul {
+  list-style: inside none;
+  margin: 0;
+  padding: 0;
+}
+#cssmenu > ul > li {
+  list-style: inside none;
+  float: left;
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+#cssmenu.align-center > ul {
+  text-align: center;
+}
+#cssmenu.align-center > ul > li {
+  float: none;
+  margin-left: -3px;
+}
+#cssmenu.align-center ul ul {
+  text-align: left;
+}
+#cssmenu.align-center > ul > li:first-child > a {
+  border-radius: 0;
+}
+#cssmenu > ul > li > a {
+  outline: none;
+  display: block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0);
+  font-weight: 500;
+  font-size: 14px;
+  font-family: Helvetica;
+  border-right: 3px solid #ffffff;
+ color: #969292;
+  padding: 12px 82px;
+  background: url(static/logo.jpg) no-repeat;
+}
+#cssmenu > ul > li:first-child > a {
+  border-radius: 5px 0 0 5px;
+}
+#cssmenu > ul > li > a:after {
+  content: "";
+  position: absolute;
+  border-right: 1px solid;
+  top: -1px;
+  bottom: -1px;
+  right: -2px;
+  z-index: 99;
+  border-color: #3c3c3c;
+}
+#cssmenu ul li.has-sub:hover > a:after {
+
+  top: 0;
+  bottom: 0;
+}
+#cssmenu > ul > li.has-sub > a:before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 6px;
+  border: 5px solid transparent;
+
+}
+#cssmenu > ul > li.has-sub:hover > a:before {
+  top: 19px;
+}
+#cssmenu > ul > li.has-sub:hover > a {
+  padding-bottom: 14px;
+  z-index: 999;
+  border-color: #ffffff;
+}
+#cssmenu ul li.has-sub:hover > ul,
+#cssmenu ul li.has-sub:hover > div {
+  display: block;
+}
+#cssmenu > ul > li.has-sub > a:hover,
+#cssmenu > ul > li.has-sub:hover > a {
+  background: #3D3C3A;
+  color : #ffffff;
+  border-color: #000000;
+}
+#cssmenu ul li > ul,
+#cssmenu ul li > div {
+  display: none;
+  width: auto;
+  position: absolute;
+  top: 38px;
+  height:600px;
+  background: #3D3C3A;
+  border-radius: 0 0 5px 5px;
+  z-index: 999;
+  padding: 10px 0;
+}
+#cssmenu ul li > ul {
+  width: 208px;
+}
+#cssmenu ul ul ul {
+  position: relative;
+}
+#cssmenu ul ul li:hover > ul {
+  left: 100%;
+  top: -10px;
+  border-radius: 5px;
+}
+#cssmenu ul li > ul li {
+  display: block;
+  list-style: inside none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+#cssmenu ul li > ul li a {
+  outline: none;
+  display: block;
+  position: relative;
+  font: 10pt  Helvetica;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0);
+  margin: 5px;
+  padding: 8px 20px;
+}
+#cssmenu,
+#cssmenu ul ul > li:hover > a,
+#cssmenu ul ul li a:hover {
+  background: #000000;
+  background: -moz-linear-gradient(top, #3c3c3c 0%, #222222 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3c3c3c), color-stop(100%, #222222));
+  background: -webkit-linear-gradient(top, #f1f1ef 0%, #f1f1ef 100%);
+  background: -o-linear-gradient(top, #3c3c3c 0%, #222222 100%);
+  background: -ms-linear-gradient(top, #3c3c3c 0%, #222222 100%);
+  background: linear-gradient(top, #3c3c3c 0%, #222222 100%);
+}
+#cssmenu > ul > li > a:hover {
+  background: #3D3C3A;
+  color: #ffffff;
+}
+#cssmenu ul ul a:hover {
+  color: #000000;
+  
+}
+#cssmenu > ul > li.has-sub > a:hover:before {
+  border-top: 5px solid #ffffff;
+}
+</style>   
+<style>
+a {
+    text-decoration: none !important;
+}
+</style>
+<style>
+.css_button111 {
+    font-size: 10px;
+    font-family: Helvetica; 
+    font-weight: normal;
+    text-decoration: inherit;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    -moz-border-radius: 6px 6px 6px 6px;
+    border-radius: 6px 6px 6px 6px;
+    border: 1px solid #3C6EB0;
+    padding: 1px 13px;
+    cursor: pointer;
+    color: #FFFFFF;
+    display: inline-block;
+    background-color:#006699;
+	float: right;
+	margin : 1px 0px;
+}
+
+.css_button111:hover {
+    background-color: #468ccf;
+}
+
+.css_button111:active {
+    position:relative;
+    top: 1px;
+}
+</style>  
+<style>
+a {
+    text-decoration: none !important;
+}
+</style>
+
+<style>
+#resources {
+    font-family: Helvetica;
+    width: 100%;
+    border-collapse: collapse;
+	border: none;
+	font-weight:normal;
+	
+}
+
+#resources td, #resources th {
+    font-size: 14px;
+    border: 2px solid #B6B6B4;
+    padding: 3px 7px 2px 7px;
+	border: none;
+	font-weight:normal;
+}
+
+#resources th {
+    font-size: 14px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    background-color: #f1f1ef; 
+color: #969292;
+	
+	
+}
+
+#resources tr.alt td {
+font-size: 12px;
+    color: #000000;
+    background-color: #FFFFFF;
+}
+</style>
+<style>
+#resources1 {
+    font-family: Helvetica;
+    width: 100%;
+    border-collapse: collapse;
+	
+}
+
+#resources1 td, #resources1 th {
+    font-size: 1em;
+    border: 2px solid #B6B6B4;
+    padding: 3px 7px 2px 7px;
+	font-weight:normal;
+	border: none;
+}
+input1 {
+    border: 0;
+    background: transparent /* the important bit */
+}
+#resources1 th {
+    font-size: 14px;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    background-color: #f1f1ef;
+    color: #969292;
+}
+
+#resources1 tr.alt td {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+</style>
+<style>
+#resources2 {
+    font-family: Helvetica;
+    width: 100%;
+    border-collapse: collapse;
+	font-size: 14px; 
+color: #969292;
+	
+}
+
+#resources2 td, #resources2 th {
+    border: 2px solid #B6B6B4;
+    padding: 3px 7px 2px 7px;
+	font-weight:normal;
+	border: none;
+}
+
+#resources2 th {
+    font-size: 14px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    background-color: #f1f1ef;
+    color: #969292;
+}
+
+#resources2 tr.alt td {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+</style>
+<style>
+#resources3 {
+    font-family: Helvetica;
+    width: 100%;
+    border-collapse: collapse;
+	font-size: 14px; 
+color: #969292;
+	
+}
+
+#resources3 td, #resources3 th {
+    font-size: 1em;
+    border: 2px solid #B6B6B4;
+    padding: 3px 7px 2px 7px;
+	font-weight:normal;
+	border: none;
+}
+
+#resources3 th {
+    font-size: 14px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    background-color: #f1f1ef;
+    color: #969292;
+}
+
+#resources3 tr.alt td {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+</style>
+
+ <style type="text/css">
+.tabclass{
+height:1600px;
+background:#f1f1ef;
+font-family: Helvetica;
+font-size: 14px;
+}
+</style>
+
+<style> 
+
+.tabrowcolor
+{
+     background-color: #fff; 
+}
+
+</style>
+
+<style> 
+
+.tabrowcenter
+{
+       vertical-align: middle;
+}
+
+</style>
+   
+<script>
+  $(document).ready(function() {
+    $("#datepicker").datepicker();
+  });
+</script>
+<script>
+function btnclick() {
+ $(function() {
+    $( "#datepicker" ).datepicker("show");
+  }); 
+ 	}
+</script>
+
+<style type="text/css">
+#wrap {
+   width:1200px;
+   margin:0 auto;
+}
+#left_col {
+   float:left;
+   width:560px;
+   
+}
+#left_col1 {
+   float:left;
+   width:1000px;
+   
+   }
+input {
+border-color: #ff0000
+border-style: solid;
+    border-width: 2px;
+    line-height: 20px;
+}
+#right_col {
+   float:right;
+   width:560px;
+}
+</style>
+<script>
+$("li").click(function(e) {
+  e.preventDefault();
+  $("li").removeClass("selected");
+  $(this).addClass("selected");
+});
+</script>
+
+
+<style type="text/css">
+#tabs {
+	margin: 0;
+	padding-left: 20px;
+	padding-top:0px;
+	height:30px;
+}
+#tabs li { 
+	display:inline; 
+	border-top: .1em solid #e5e5e5;
+	border-left: .1em solid #e5e5e5;
+	border-right: .1em solid #e5e5e5;
+	
+}
+
+#tabs li a.selected 
+{
+ background:#fff;
+				color:#000;
+				position: relative;
+				top: -5px;
+padding-top: 5px;
+z-index: 10;
+ }
+
+#tabs li a {
+	text-decoration: none;
+	padding: 0.25em 6em;
+	color: #969292;
+
+}
+
+</style>
+
+
+ <script language="javascript">
+function Checkfiles()
+{
+var fup = document.getElementById('file');
+var fileName = fup.value;
+var ext = fileName.substring(fileName.lastIndexOf('.') + 1);
+if(ext == "docx" || ext == "xlsx" || ext == "JPEG" || ext == "jpeg" || ext == "jpg" || ext == "JPG" || ext == "doc" || ext == "xls")
+{
+return true;
+} 
+else
+{
+alert("Upload doc or xls or docx or xlsx formate files only");
+<!--fup.focus();-->
+return false;
+
+}
+</script> 
+
+<style>
+body 
+{
+font-family: Helvetica;
+font-size: 14px; 
+color: #969292;
+font-weight: 600;
+ 
+}
+</style>
+
+<style>
+.css_button {
+    font-size: 13px;
+    font-family: Helvetica; 
+    font-weight: normal;
+    text-decoration: inherit;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid #3C6EB0;
+    padding: 3px 20px;
+    cursor: pointer;
+    color: #FFFFFF;
+    display: inline-block;
+    background-color:#006699;
+	float: right;
+margin: -25px 250px;
+}
+
+.css_button:hover {
+    background-color: #468ccf;
+}
+
+.css_button:active {
+    position:relative;
+    top: 1px;
+}
+</style>
+<style>
+#purchaseorderbd {
+    font-family: Helvetica;
+    width: 100%;
+	height:100%;
+    border-collapse: separate;
+	border-spacing: 5px;
+}
+
+
+
+#purchaseorderbd th
+{
+    font-size: 14px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #FFFFFF;
+    color: #969292;
+	font-weight: normal;
+}
+
+#purchaseorderbd td {
+text-align:center;
+padding-top:10px;
+padding bottom:10px;
+font-size: 12px;
+color: #969292;
+}
+
+</style>
+
+<style>
+html {
+		min-width: 1080px;
+		min-height: 100%;
+		font-family: Helvetica;
+font-size: 14px; 
+color: #969292;
+font-weight: 600;
+	}
+
+.css_button3 {
+    font-size: 13px;
+    font-family: Helvetica; 
+    font-weight: normal;
+    text-decoration: inherit;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid #3C6EB0;
+    padding: 6px 20px;
+    cursor: pointer;
+    color: #FFFFFF;
+    display: inline-block;
+    background-color: #006699;
+	float: right;
+	margin: 7px 1px;
+
+}
+
+.css_button3:hover {
+    background-color: #468ccf;
+}
+
+.css_button3:active {
+    position:relative;
+    top: 1px;
+	
+}
+</style>
+<style>
+.css_button31 {
+    font-size: 13px;
+    font-family: Helvetica; 
+    font-weight: normal;
+    text-decoration: inherit;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid #3C6EB0;
+    padding: 3px 27px;
+    cursor: pointer;
+    color: #FFFFFF;
+    display: inline-block;
+    background-color:#006699;
+	float: right;
+margin: -29px 9px;
+}
+
+.css_button:hover {
+    background-color: #468ccf;
+}
+
+.css_button:active {
+    position:relative;
+    top: 1px;
+}
+</style>
+<style>
+.css_button1 {
+    font-size: 14px;
+    font-family: Helvetica; 
+    font-weight: normal;
+    text-decoration: inherit;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid #3C6EB0;
+    padding: 6px 20px;
+    cursor: pointer;
+    color: #FFFFFF;
+    display: inline-block;
+    background-color:#006699;
+	float: right;
+	margin : 1px 20px;
+}
+
+.css_button1:hover {
+    background-color: #468ccf;
+}
+
+.css_button1:active {
+    position:relative;
+    top: 1px;
+}
+</style>
+<style>
+.css_button11 {
+    font-size: 10px;
+    font-family: Helvetica; 
+    font-weight: normal;
+    text-decoration: inherit;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    -moz-border-radius: 6px 6px 6px 6px;
+    border-radius: 6px 6px 6px 6px;
+    border: 1px solid #3C6EB0;
+    padding: 1px 13px;
+    cursor: pointer;
+    color: #FFFFFF;
+    display: inline-block;
+    background-color:#006699;
+	float: right;
+	margin : 1px 20px;
+}
+
+.css_button11:hover {
+    background-color: #468ccf;
+}
+
+.css_button11:active {
+    position:relative;
+    top: 1px;
+}
+</style>
+
+<style>
+#purchaseorder1 {
+    font-family: Helvetica;
+    width: 100%;
+	height:100%;
+    border-collapse: separate;
+	border-spacing: 5px;
+}
+
+#purchaseorder1 {
+border: 2px solid;
+ border-color: #B0B0B0;}
+ </style>
+
+
+<style>
+.css_button12 {
+    font-size: 13px;
+    font-family: Helvetica; 
+    font-weight: normal;
+    text-decoration: inherit;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid #3C6EB0;
+    padding: 3px 20px;
+    cursor: pointer;
+    color: #FFFFFF;
+    display: inline-block;
+    background-color:#006699;
+	float: left;
+	margin: 0px 0px;
+}
+
+.css_button12:hover {
+    background-color: #468ccf;
+}
+
+.css_button12:active {
+    position:relative;
+    top: 1px;
+}
+</style>
+<style> 
+
+.links
+{
+ background-color: #3D3C38;
+color: white;
+border-color: #3D3C3A;
+ border-bottom-color: #3D3C3A; 
+ border-width:0px;
+}
+
+</style>
+</head>
+<body bgcolor = "#FFF7EB" id="newaccount">
+
+
+<!-- &nbsp;<a href='/resunsub/'style= "COLOR: #eb7501; ">   Resume Submit   	 </a>
+&nbsp;&nbsp;
+<a href='/requiresub/' >    Requirement Submit </a>  &nbsp;&nbsp;
+
+<a href='/query/'  >     Search    </a> &nbsp;&nbsp;
+<a href='/ReportManagementfile/'> Report Management </a> </div>&nbsp;&nbsp;
+<a href='/RequirementManagement/'> Requirement Management </a> &nbsp;&nbsp;
+<a href='/help1/'>    help    </a> &nbsp; &nbsp;
+<!--<a href='/openstateresume/' > Open State Resumes </a>  &nbsp;&nbsp
+<a href='/logout/'>            Sign Out    </a><br> -->
+
+
+
+<br>
+<div class="tabclass">
+
+<br>
+<br>
+<div id="wrap">
+    <div id="purchaseorder1">
+<form  id="login" method="POST" action="/setdata/" >
+
+
+<div class="tabrowcenter">
+<br>
+  
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" required placeholder="NAME" name="name1" id="name1"  size = "40" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="joining" required placeholder="MOB NO"  name="no" id="no"  size = "40" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" required class="css_button" title="Click for a search result" value = "SAVE"/ >
+	<input type="hidden" id="name" name="name" value={{name}}>
+	</form>
+	<br>
+	<br>
+	<table id="purchaseorderbd">
+			
+  <tr>
+   
+  
+  <th>Name</th>
+  <th>Mob No</th>
+   <th>Delete</th>
+ <!-- <th>Generated Date</th>-->
+  
+  
+  
+    
+  </tr>
+  <tr>{% for result in list1 %}
+<td >{{result.0}}</td>
+	
+	<td>{{result.1}}</td>
+	<td><a href="/passwordkey1/" >Delete</a></td>
+	<!-- <td>{{result.2}}</td> -->
+	
+  </tr>
+
+   {% endfor %}
+
+ 
+
+</table>
+
+	</div>
+	
+	<a href="/display/{{list1}}" class = "css_button12">submit</a>
+
+	</div>
+	<br>
+	<br>
+	<br>
+	
+
+<script>
+  $(document).ready(function() {
+    $("#joining").datepicker();
+  });
+</script>
+<script>
+  $(document).ready(function() {
+    $("#joining1").datepicker();
+  });
+</script>
+<script>
+
+function date_change()
+
+{
+
+   var date=document.getElementById("joining").value ;
+   
+   var date1=document.getElementById("joining1").value ;
+   
+   // alert(date1);
+   if (date1 !=" ")
+   {
+  // if (date!='' and date1!='')
+   //{
+   
+        document.getElementById("search").disabled=false;
+		}
+  //}
+
+	   
+	 
+}
+</script>
+</body>
+</html>
